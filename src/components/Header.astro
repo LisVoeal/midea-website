@@ -5,13 +5,13 @@ import Navigation from "../components/Navigation.astro";
 <header>
   <Navigation />
   <div class="header-container">
-    <a href="#" class="request-button">Оставить заявку</a>
+    <a href="#" class="request-button">Оставить заявку на ремонт</a>
   </div>
 </header>
 
 <style>
   header {
-    height: 100vh;
+    height: 75vh;
     background-image: url(../assets/headerimg.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -21,8 +21,7 @@ import Navigation from "../components/Navigation.astro";
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 90vh;
-    width: 100%;
+    height: 100%;
   }
   .request-button {
     background-color: #1f94d2;
@@ -34,7 +33,7 @@ import Navigation from "../components/Navigation.astro";
     text-transform: uppercase;
     text-decoration: none;
     border-radius: 50px;
-    box-shadow: 0 2px 5px rgba(0,0,0, .5);
+    box-shadow: 0 2px 5px rgba(0,0,0, .75);
     transition: .5s;
   }
   .request-button:hover{
