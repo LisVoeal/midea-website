@@ -1,0 +1,43 @@
+---
+import Navigation from "../components/Navigation.astro";
+---
+
+<header>
+  <Navigation />
+  <div class="header-container">
+    <a href="#" class="request-button">Оставить заявку</a>
+  </div>
+</header>
+
+<style>
+  header {
+    height: 100vh;
+    background-image: url(../assets/headerimg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    width: 100%;
+  }
+  .request-button {
+    background-color: #1f94d2;
+    padding: 25px 50px;
+    color: white;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 2px 5px rgba(0,0,0, .5);
+    transition: .5s;
+  }
+  .request-button:hover{
+    box-shadow: 0 2px 3px rgba(0,0,0, .5);
+  }
+</style>
