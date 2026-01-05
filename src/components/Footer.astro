@@ -1,37 +1,67 @@
 ---
-
+import { Image } from "astro:assets";
+import logo from "../assets/logo.svg";
 ---
 
 <footer>
-  <div class="column">
-    <ul>
-      <li><a href="">Партнерам</a></li>
-      <li><a href="">Гарантия</a></li>
-      <li><a href="">Платный ремонт</a></li>
-      <li><a href="">О компании</a></li>
-      <li><a href="">Заказ запчастей</a></li>
-    </ul>
+  <div class="row">
+
+    <div class="left item">
+      <ul>
+        <li><a href="">Партнерам</a></li>
+        <li><a href="">Гарантия</a></li>
+        <li><a href="">Платный ремонт</a></li>
+        <li><a href="">О компании</a></li>
+        <li><a href="">Заказ запчастей</a></li>
+      </ul>
+    </div>
+
+    <div class="middle item">
+      <Image src={logo} alt="Logo" width="250" height="250" />
+    </div>
+
+    <div class="right item">
+     <p>ООО «Простые технологии»</p>
+      <p>УНП: 190984614 ОКПО: 377878515000</p>
+      <p>Юридический и почтовый адрес для корреспонденции:<br> 220004, г. Минск, ул. М. Танка, д. 30 к. 2 пом. 97</p>
+      <p>Р/сч: BY72ALFA30122043850140270000 (BYN)</p>
+      <p>в ЗАО "Альфа банк" BIC SWIFT: ALFABY2X</p>
+      <p>Email: info@alfalab.by</p>
+    </div>
+
   </div>
 </footer>
 
 <style>
-  footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  footer{
+    padding: 40px auto;
+    background-color: #1f94d2;
+    font-family: Roboto, sans-serif;
+    text-align: center;
   }
-  .column ul {
+  .row  {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction row;
+  }
+  .item{
+    min-width: 30%;
+    color: white;
+  }
+  .left ul {
     list-style: none;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
   }
-  .column ul li {
-    padding: 15px 25px;
+  .left ul li {
+    padding: 15px 0;
   }
-  .column ul li a {
+  .left ul li a {
     text-decoration: none;
     font-size: 18px;
-    color: black;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
   }
 </style>

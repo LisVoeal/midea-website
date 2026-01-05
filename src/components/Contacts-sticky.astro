@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import phone from "../assets/phone-flip-solid-full.svg";
+---
+
+<div class="contacts">
+  <a href="#"
+    ><Image src={phone} alt="Контакты" width="75" height="75" class="icon" /></a
+  >
+</div>
+
+<style>
+  .contacts {
+    position: fixed;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background: #1f94d2;
+    right: 20px;
+    bottom: 20px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  a img {
+    width: 60%;
+    height: 60%;
+  }
+</style>
