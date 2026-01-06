@@ -33,10 +33,26 @@ import Navigation from "../components/Navigation.astro";
     text-transform: uppercase;
     text-decoration: none;
     border-radius: 50px;
-    box-shadow: 0 2px 5px rgba(0,0,0, .75);
-    transition: .5s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.75);
+    transition: 0.5s;
   }
-  .request-button:hover{
-    box-shadow: 0 2px 3px rgba(0,0,0, .5);
+  .request-button:hover {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+  }
+  @media (max-width: 500px) {
+    .request-button {
+      font-size: 20px;
+    }
+  }
+  @media (max-width: 750px) {
+    .navigation {
+      display: none;
+    }
+    .burger-menu {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-right: 20px;
+    }
   }
 </style>
