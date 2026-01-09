@@ -53,7 +53,6 @@ import smalls from "../assets/categories-pics/smalls.png";
 <style>
   h2 {
     color: rgb(100, 100, 100);
-    font-family: Roboto, sans-serif;
     font-size: 42px;
     text-align: center;
     padding-top: 20px;
@@ -99,7 +98,6 @@ import smalls from "../assets/categories-pics/smalls.png";
     text-transform: uppercase;
     font-size: 24px;
     text-align: center;
-    font-family: Roboto, sans-serif;
     font-weight: bold;
   }
   @media (max-width: 1500px) {
@@ -125,12 +123,16 @@ import smalls from "../assets/categories-pics/smalls.png";
     }
   }
   @media (max-width: 500px) {
+    h2 {
+      font-size: 38px;
+    }
     .categories {
       width: 100%;
     }
     .categories-item {
       margin: 5px;
       width: 45%;
+      height: 200px;
     }
   }
 </style>

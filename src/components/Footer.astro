@@ -17,15 +17,13 @@ import logo from "../assets/logo.svg";
     </div>
 
     <div class="middle item">
-      <Image src={logo} alt="Logo" width="250" height="250" />
+      <a href="/"><img src={logo.src} alt="Logo" width="250" height="250" /></a>
     </div>
 
     <div class="right item">
      <p>ООО «Простые технологии»</p>
       <p>УНП: 190984614 ОКПО: 377878515000</p>
       <p>Юридический и почтовый адрес для корреспонденции:<br> 220004, г. Минск, ул. М. Танка, д. 30 к. 2 пом. 97</p>
-      <p>Р/сч: BY72ALFA30122043850140270000 (BYN)</p>
-      <p>в ЗАО "Альфа банк" BIC SWIFT: ALFABY2X</p>
       <p>Email: info@alfalab.by</p>
     </div>
 
@@ -36,7 +34,6 @@ import logo from "../assets/logo.svg";
   footer{
     padding: 40px auto;
     background-color: #1f94d2;
-    font-family: Roboto, sans-serif;
     text-align: center;
   }
   .row  {
@@ -53,6 +50,8 @@ import logo from "../assets/logo.svg";
     list-style: none;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding-left: 0;
   }
   .left ul li {
     padding: 15px 0;
@@ -63,5 +62,18 @@ import logo from "../assets/logo.svg";
     color: white;
     text-transform: uppercase;
     font-weight: bold;
+  }
+  .middle img{
+    max-width: 100%;
+    height: auto;
+  }
+  @media (max-width: 500px)
+  {
+    .row{
+      flex-direction: column;
+    }
+    .item{
+      max-width: 100%;
+    }
   }
 </style>
