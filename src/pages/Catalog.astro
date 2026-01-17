@@ -2,6 +2,15 @@
 import Layout from "../layouts/Layout.astro";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
+
+import washingMachine from "../assets/categories-pics/washing-machine.png";
+import dishwasher from "../assets/categories-pics/dishwasher.png";
+import freezer from "../assets/categories-pics/freezers.png";
+import oven from "../assets/categories-pics/oven.png";
+import microwave from "../assets/categories-pics/microwave.png";
+import vacuum from "../assets/categories-pics/vacuum.png";
+import stove from "../assets/categories-pics/stove.png";
+import smalls from "../assets/categories-pics/smalls.png";
 ---
 
 <Layout pageTitle="About" />
@@ -13,27 +22,50 @@ import Footer from "../components/Footer.astro";
     <div class="catalog-list item">
       <ul>
         <h5>Каталог</h5>
-        <li>Стиральные машины</li>
-        <li>Посудомоечные машины</li>
-        <li>Холодильники</li>
-        <li>Духовые шкафы</li>
-        <li>Микроволновые печи</li>
-        <li>Пылесосы</li>
-        <li>Варочные панели</li>
-        <li>Мелкая бытовая техника</li>
+        <a href="#"><li>Стиральные машины</li></a>
+        <a href="#"><li>Посудомоечные машины</li></a>
+        <a href="#"><li>Холодильники</li></a>
+        <a href="#"><li>Духовые шкафы</li></a>
+        <a href="#"><li>Микроволновые печи</li></a>
+        <a href="#"><li>Пылесосы</li></a>
+        <a href="#"><li>Варочные панели</li></a>
+        <a href="#"><li>Мелкая бытовая техника</li></a>
       </ul>
     </div>
     <div class="catalog-items item">
-      <ul>
-        <h5>Каталог</h5>
-        <li>Стиральные машины</li>
-        <li>Посудомоечные машины</li>
-        <li>Холодильники</li>
-        <li>Духовые шкафы</li>
-        <li>Микроволновые печи</li>
-        <li>Пылесосы</li>
-        <li>Варочные панели</li>
-        <li>Мелкая бытовая техника</li>
+      <ul class="categories-list">
+        <li class="categories-item">
+          <img src={washingMachine.src} alt="Ремонт стиральных машин" />
+          <p class="item-text">Ремонт стиральных машин</p>
+        </li>
+        <li class="categories-item">
+          <img src={dishwasher.src} alt="Ремонт посудомоечных машин" />
+          <p class="item-text">Ремонт посудомоечных машин</p>
+        </li>
+        <li class="categories-item">
+          <img src={freezer.src} alt="Ремонт холодильник" />
+          <p class="item-text">Ремонт холодильников</p>
+        </li>
+        <li class="categories-item">
+          <img src={oven.src} alt="Ремонт духовых шкафов" />
+          <p class="item-text">Ремонт духовых шкафов</p>
+        </li>
+        <li class="categories-item">
+          <img src={microwave.src} alt="Ремонт микроволновых печей" />
+          <p class="item-text">Ремонт микроволновых печей</p>
+        </li>
+        <li class="categories-item">
+          <img src={vacuum.src} alt="Ремонт пылесосов" />
+          <p class="item-text">Ремонт пылесосов</p>
+        </li>
+        <li class="categories-item">
+          <img src={stove.src} alt="Ремонт варочных панелей" />
+          <p class="item-text">Ремонт варочных панелей</p>
+        </li>
+        <li class="categories-item">
+          <img src={smalls.src} alt="Ремонт мелкой бытовой техники" />
+          <p class="item-text">Ремонт мелкой бытовой техники</p>
+        </li>
       </ul>
     </div>
   </div>
@@ -45,7 +77,7 @@ import Footer from "../components/Footer.astro";
   .container {
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    min-height: 90vh;
     width: 85%;
     margin: 0 auto;
   }
@@ -58,13 +90,21 @@ import Footer from "../components/Footer.astro";
   .catalog-list {
     flex: 1;
   }
+  .catalog-list a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+  }
+  .catalog-list li:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
   .catalog-items {
     flex: 4;
+    padding: 0;
   }
   .item {
-    max-height: 100%;
+    min-height: 100%;
     margin: 10px 0;
-    border: 1px solid rgba(0, 0, 0, 0.1);
   }
   .catalog-list ul {
     list-style: none;
@@ -74,5 +114,26 @@ import Footer from "../components/Footer.astro";
   }
   .catalog-list li {
     padding: 10px;
+  }
+  .categories-item {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    flex-basis: 24%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .categories-item:hover {
+    border: 1px solid #1f94d2;
+  }
+  .categories-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
   }
 </style>
